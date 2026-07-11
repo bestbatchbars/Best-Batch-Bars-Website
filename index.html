@@ -283,6 +283,29 @@
     flex-shrink:0;
     padding-left:18px;
   }
+  .allergens{
+    display:flex;
+    gap:6px;
+    flex-wrap:wrap;
+    margin-top:6px;
+  }
+  .allergen-tag{
+    font-family:var(--utility);
+    font-size:0.72rem;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+    padding:3px 8px;
+    border-radius:2px;
+    background:var(--cream-deep);
+    border:1px solid var(--line);
+    color:var(--ink-soft);
+    font-weight:600;
+  }
+  .allergen-tag.warning{
+    background:#FBF0E8;
+    border-color:#D4956A;
+    color:#8B4A1C;
+  }
   .menu-note{
     margin-top:32px;
     font-style:italic;
@@ -402,6 +425,13 @@
     padding:8px 2px;
     color:var(--ink);
     resize:vertical;
+  }
+  .field select{
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    border-radius:0;
+    cursor:pointer;
   }
   .field input:focus,
   .field select:focus,
@@ -563,7 +593,7 @@
 </section>
 
 <!-- ============ MEET THE BAKER ============ -->
-<section id="baker">
+<section id="baker" style="padding-top:10px;">
   <div class="wrap">
     <div class="approach-grid">
       <div class="reveal">
@@ -605,25 +635,25 @@
 
       <div class="menu-item">
         <svg class="menu-icon" viewBox="0 0 34 34" aria-hidden="true"><rect x="6" y="13" width="22" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.2"/><circle cx="11" cy="13" r="1.5" fill="currentColor"/><circle cx="17" cy="12" r="1.5" fill="currentColor"/><circle cx="23" cy="13" r="1.5" fill="currentColor"/><circle cx="14" cy="16" r="1.2" fill="currentColor"/><circle cx="20" cy="17" r="1.2" fill="currentColor"/></svg>
-        <div class="menu-text"><h3>Brown Butter Chocolate Chip</h3><span class="menu-desc">Nutty browned butter base, generous pockets of chocolate chips throughout, flaked sea salt finish.</span></div>
+        <div class="menu-text"><h3>Brown Butter Chocolate Chip</h3><span class="menu-desc">Nutty browned butter base, generous pockets of chocolate chips throughout, flaked sea salt finish.</span></div><div class="allergens"><span class="allergen-tag">Dairy</span><span class="allergen-tag">Eggs</span></div>
         
       </div>
 
       <div class="menu-item">
         <svg class="menu-icon" viewBox="0 0 34 34" aria-hidden="true"><rect x="6" y="15" width="22" height="8" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M10 15 C10 10 14 8 17 8 C20 8 24 10 24 15" fill="none" stroke="currentColor" stroke-width="1"/><line x1="13" y1="15" x2="13" y2="23" stroke="currentColor" stroke-width="0.6"/><line x1="21" y1="15" x2="21" y2="23" stroke="currentColor" stroke-width="0.6"/></svg>
-        <div class="menu-text"><h3>Gooey S&rsquo;mores</h3><span class="menu-desc">Graham cracker crumbs mixed right in, toasted marshmallow layer, and plenty of chocolate chips.</span></div>
+        <div class="menu-text"><h3>Gooey S&rsquo;mores</h3><span class="menu-desc">Graham cracker crumbs mixed right in, toasted marshmallow layer, and plenty of chocolate chips.</span></div><div class="allergens"><span class="allergen-tag">Dairy</span><span class="allergen-tag">Eggs</span></div>
         
       </div>
 
       <div class="menu-item">
         <svg class="menu-icon" viewBox="0 0 34 34" aria-hidden="true"><rect x="6" y="13" width="22" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.2"/><circle cx="11" cy="15" r="1" fill="currentColor"/><circle cx="15" cy="13.5" r="0.8" fill="currentColor"/><circle cx="19" cy="15" r="1" fill="currentColor"/><circle cx="23" cy="13.5" r="0.8" fill="currentColor"/><circle cx="13" cy="18" r="0.9" fill="currentColor"/><circle cx="17" cy="19" r="0.8" fill="currentColor"/><circle cx="21" cy="18" r="0.9" fill="currentColor"/></svg>
-        <div class="menu-text"><h3>Funfetti Sugar Cookie</h3><span class="menu-desc">Soft vanilla sugar cookie bar packed with rainbow sprinkles.</span></div>
+        <div class="menu-text"><h3>Funfetti Sugar Cookie</h3><span class="menu-desc">Soft vanilla sugar cookie bar packed with rainbow sprinkles.</span></div><div class="allergens"><span class="allergen-tag">Dairy</span><span class="allergen-tag">Eggs</span></div>
         
       </div>
 
       <div class="menu-item">
         <svg class="menu-icon" viewBox="0 0 34 34" aria-hidden="true"><rect x="6" y="13" width="22" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M6 17 Q10 15 14 17 Q18 19 22 17 Q26 15 28 17" fill="none" stroke="currentColor" stroke-width="0.8"/><line x1="6" y1="20" x2="28" y2="20" stroke="currentColor" stroke-width="0.5" stroke-dasharray="2 2"/></svg>
-        <div class="menu-text"><h3>Snickerdoodle</h3><span class="menu-desc">Chewy, buttery bar with a golden cinnamon sugar crust.</span></div>
+        <div class="menu-text"><h3>Snickerdoodle</h3><span class="menu-desc">Chewy, buttery bar with a golden cinnamon sugar crust.</span></div><div class="allergens"><span class="allergen-tag">Dairy</span><span class="allergen-tag">Eggs</span></div>
         
       </div>
 
@@ -631,12 +661,12 @@
 
       <div class="menu-item">
         <svg class="menu-icon" viewBox="0 0 34 34" aria-hidden="true"><rect x="5" y="14" width="24" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="1.2"/><circle cx="10" cy="19" r="2" fill="currentColor" fill-opacity="0.7"/><circle cx="17" cy="18" r="2" fill="currentColor" fill-opacity="0.5"/><circle cx="24" cy="19" r="2" fill="currentColor" fill-opacity="0.7"/><circle cx="13" cy="21" r="1.5" fill="currentColor" fill-opacity="0.4"/><circle cx="21" cy="21" r="1.5" fill="currentColor" fill-opacity="0.5"/></svg>
-        <div class="menu-text"><h3>M&amp;M</h3><span class="menu-desc">Classic cookie bar base with colorful M&amp;Ms baked right in.</span></div>
+        <div class="menu-text"><h3>M&amp;M</h3><span class="menu-desc">Classic cookie bar base with colorful M&amp;Ms baked right in.</span></div><div class="allergens"><span class="allergen-tag">Dairy</span><span class="allergen-tag">Eggs</span></div>
       </div>
 
       <div class="menu-item">
         <svg class="menu-icon" viewBox="0 0 34 34" aria-hidden="true"><rect x="5" y="13" width="24" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.2"/><rect x="9" y="16" width="6" height="5" rx="1.5" fill="currentColor" fill-opacity="0.35" stroke="currentColor" stroke-width="0.7"/><rect x="19" y="16" width="6" height="5" rx="1.5" fill="currentColor" fill-opacity="0.35" stroke="currentColor" stroke-width="0.7"/></svg>
-        <div class="menu-text"><h3>Peanut Butter Cup</h3><span class="menu-desc">Rich peanut butter base loaded with peanut butter cups and chocolate chips.</span></div>
+        <div class="menu-text"><h3>Peanut Butter Cup</h3><span class="menu-desc">Rich peanut butter base loaded with peanut butter cups and chocolate chips.</span></div><div class="allergens"><span class="allergen-tag">Dairy</span><span class="allergen-tag">Eggs</span><span class="allergen-tag warning">Peanuts</span></div>
       </div>
 
     <p class="menu-note reveal">1 bar — $4 &nbsp;·&nbsp; 4 bars — $14 &nbsp;·&nbsp; 12 bars — $39. Mix and match flavours. Free pickup in Belmont. Local delivery is $15 flat, or free on orders $100+.</p>
@@ -710,6 +740,7 @@
       <p class="eyebrow">Place an Order</p>
       <h2>Tell us what's going on.</h2>
       <p style="margin-top:20px;color:var(--ink-soft);">Tell me what you'd like, and I'll reply with availability, delivery options, and total price.</p>
+      <p style="margin-top:16px;color:var(--ink-soft);">Ordering at least 2 days in advance is preferred — it's first come, first served. Payment is through <strong>Venmo</strong> <strong>@Beckett-Warburton</strong>.</p>
     </div>
 
     <div class="ledger reveal">
@@ -726,7 +757,7 @@
           <label for="occasion">Occasion</label>
           <select id="occasion" name="occasion">
             <option>Birthday</option>
-            <option>School Event or Team</option>
+            <option>School or Team Event</option>
             <option>Holiday Gift</option>
             <option>Treat Yourself</option>
             <option>Other</option>
@@ -737,8 +768,18 @@
           <input id="date" name="date" type="date">
         </div>
         <div class="field">
-          <label for="notes">Flavours &amp; Notes</label>
-          <textarea id="notes" name="notes" placeholder="Quantities, flavour preferences, dietary notes..."></textarea>
+          <label for="notes">Flavours <span style="text-transform:none;letter-spacing:0;font-weight:400;">(select all that apply)</span></label>
+          <div style="border-bottom:1px solid var(--ink-soft);padding-bottom:10px;">
+            <div style="display:flex;flex-direction:column;gap:8px;margin-top:4px;">
+              <label style="display:flex;align-items:center;gap:10px;font-family:var(--utility);font-size:0.9rem;text-transform:none;letter-spacing:0;color:var(--ink);cursor:pointer;"><input type="checkbox" name="flavour_bbcc" style="width:auto;border:none;border-bottom:none;padding:0;"> Brown Butter Chocolate Chip</label>
+              <label style="display:flex;align-items:center;gap:10px;font-family:var(--utility);font-size:0.9rem;text-transform:none;letter-spacing:0;color:var(--ink);cursor:pointer;"><input type="checkbox" name="flavour_smores" style="width:auto;border:none;border-bottom:none;padding:0;"> Gooey S'mores</label>
+              <label style="display:flex;align-items:center;gap:10px;font-family:var(--utility);font-size:0.9rem;text-transform:none;letter-spacing:0;color:var(--ink);cursor:pointer;"><input type="checkbox" name="flavour_funfetti" style="width:auto;border:none;border-bottom:none;padding:0;"> Funfetti Sugar Cookie</label>
+              <label style="display:flex;align-items:center;gap:10px;font-family:var(--utility);font-size:0.9rem;text-transform:none;letter-spacing:0;color:var(--ink);cursor:pointer;"><input type="checkbox" name="flavour_snickerdoodle" style="width:auto;border:none;border-bottom:none;padding:0;"> Snickerdoodle</label>
+              <label style="display:flex;align-items:center;gap:10px;font-family:var(--utility);font-size:0.9rem;text-transform:none;letter-spacing:0;color:var(--ink);cursor:pointer;"><input type="checkbox" name="flavour_mm" style="width:auto;border:none;border-bottom:none;padding:0;"> M&amp;M</label>
+              <label style="display:flex;align-items:center;gap:10px;font-family:var(--utility);font-size:0.9rem;text-transform:none;letter-spacing:0;color:var(--ink);cursor:pointer;"><input type="checkbox" name="flavour_pbcup" style="width:auto;border:none;border-bottom:none;padding:0;"> Peanut Butter Cup</label>
+            </div>
+          </div>
+          <textarea id="notes" name="notes" placeholder="Quantities, any other notes..."></textarea>
         </div>
         <button class="btn primary" type="submit">Submit Order Request</button>
       </form>
@@ -762,6 +803,17 @@
           <span class="brand-name">Best Batch Bars</span>
         </div>
         <p class="footer-note">Baked in small batches out of a home kitchen in Belmont. Free pickup available. Local delivery is $15, or free on orders $100+.</p>
+        <p class="footer-note" style="margin-top:12px;">
+          <span style="display:inline-flex;align-items:center;gap:6px;color:var(--ink-soft);font-family:var(--utility);font-size:0.88rem;">
+            <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true"><path d="M2 1h3l1.5 3.5-1.5 1a8 8 0 003.5 3.5l1-1.5L13 9v3a1 1 0 01-1 1C5 13 0 8 0 2a1 1 0 011-1h1z" fill="currentColor"/></svg>
+            (669) 265-4975
+          </span>
+          &nbsp;·&nbsp;
+          <a href="mailto:bestbatchbars@gmail.com" style="display:inline-flex;align-items:center;gap:6px;color:var(--ink-soft);font-family:var(--utility);font-size:0.88rem;">
+            <svg width="13" height="11" viewBox="0 0 13 11" fill="none" aria-hidden="true"><rect x="0.5" y="0.5" width="12" height="10" rx="1" stroke="currentColor"/><path d="M1 1l5.5 5L12 1" stroke="currentColor" stroke-linecap="round"/></svg>
+            bestbatchbars@gmail.com
+          </a>
+        </p>
       </div>
       <ul class="footer-links">
         <li><a href="#menu">Menu</a></li>
@@ -774,6 +826,12 @@
 </footer>
 
 <script>
+  // Set minimum date to 2 days from today
+  const dateInput = document.getElementById('date');
+  const minDate = new Date();
+  minDate.setDate(minDate.getDate() + 2);
+  dateInput.min = minDate.toISOString().split('T')[0];
+
   // Mobile nav toggle + smooth scroll for all anchor links
   const navToggle = document.getElementById('navToggle');
   const navLinks = document.getElementById('navLinks');
